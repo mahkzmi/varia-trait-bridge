@@ -1,67 +1,67 @@
 # 🧬 Varia Trait-Bridge
 
-**Interpretable Genotype-to-Phenotype Screening for Salinity Stress.**
+**Interpretable Genotype-to-Phenotype Screening for Salinity Stress**
 
-Varia Trait-Bridge is a lightweight, explainable machine learning tool that predicts salinity stress in plants based on gene expression data. It identifies the key genes driving the prediction, bridging the gap between "black-box" AI and actionable biological insights.
+A lightweight, explainable machine learning tool that predicts salinity stress in plants based on gene expression data, and identifies the key genes driving the prediction.
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-View_App-brightgreen)](https://mahkzmi.github.io/varia-trait-bridge/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Online-brightgreen?style=for-the-badge)](https://mahkzmi.github.io/varia-trait-bridge/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 ---
 
 ## 🎯 The Problem
 
-In modern plant breeding, AI models often excel on clean laboratory data but fail to generalize to real field conditions (such as salinity or drought stress). Furthermore, most deep learning models act as "black boxes"—a geneticist cannot see *why* a specific genotype was classified as stress-tolerant. 
+In plant breeding and genomics, AI models often perform well on clean, controlled lab data but struggle to generalize under real-world environmental stress (e.g., salinity). Furthermore, most machine learning models act as "black boxes"—a geneticist cannot see *why* a model made a specific prediction.
 
-Without interpretability, these models are hard to trust and difficult to integrate into commercial breeding pipelines.
+## 💡 The Solution: Explainable AI
 
-## 💡 Our Solution
+Varia Trait-Bridge takes publicly available gene expression data from the **GSE199590** dataset (Arabidopsis thaliana subjected to 100 mM NaCl salinity stress) and delivers two things:
 
-**Varia Trait-Bridge** demonstrates how we can make AI transparent. 
+1. **Accurate Prediction:** Classifies each sample as "Control" or "Salinity-stressed" with high confidence.
+2. **Interpretability:** Extracts and visualizes the top genes (Feature Importance) the model relied upon to make its decision.
 
-1. **Real Data:** The model is trained on the public **NCBI GEO GSE199590** dataset (RNA-seq data of *Arabidopsis thaliana* under 100 mM NaCl stress).
-2. **Prediction:** It classifies samples as either "Control" or "Salinity-stressed".
-3. **Interpretability (XAI):** It uses a Random Forest model to extract **Feature Importance**. The tool visualizes the top genes that contributed most to the decision, allowing geneticists to cross-reference AI results with known biological pathways.
+This allows geneticists and breeders to cross-reference AI predictions with known biological pathways, accelerating the development of stress-tolerant crops.
 
 ## 🚀 Live Demo
 
-Experience the interactive dashboard here:  
-👉 **[Launch Varia Trait-Bridge](https://mahkzmi.github.io/varia-trait-bridge/)**
+👉 **[Try the Live Demo Here](https://mahkzmi.github.io/varia-trait-bridge/)**
 
-*(No installation required. Runs entirely in your browser.)*
+*No installation required. Runs entirely in the browser.*
 
-## 📂 Repository Structure
+## 📊 Data Source
 
-- `index.html` — The frontend interface (Interactive dashboard with animations).
-- `app.py` — The backend Python/Streamlit code used for data processing and model training.
-- `real_gene_data.csv` — The extracted and cleaned dataset (50 key genes, 44 samples) from GSE199590.
-- `requirements.txt` — Python dependencies for running `app.py` locally.
+- **NCBI GEO Accession:** GSE199590
+- **Organism:** *Arabidopsis thaliana*
+- **Condition:** 100 mM NaCl (Salinity stress) vs. Control (0h)
+- **Data Type:** RNA-seq (Raw Read Counts)
 
 ## 🛠 Tech Stack
 
-- **Data Processing:** Python, Pandas, Scikit-learn
-- **Frontend:** HTML, CSS, JavaScript
-- **Data Source:** NCBI GEO GSE199590
+- **Modeling (Python):** `scikit-learn` (Random Forest), `pandas`
+- **Frontend (Web):** HTML5, CSS3, Vanilla JavaScript
+- **Hosting:** GitHub Pages
 
-## 👩‍💻 Running Locally
+## 📁 Repository Structure
+varia-trait-bridge/
+├── index.html # Interactive web dashboard (Live Demo)
+├── app.py # Python Streamlit app (Data processing & ML pipeline)
+├── real_gene_data.csv # Processed dataset from GSE199590
+├── requirements.txt # Python dependencies for app.py
+└── README.md
 
-If you want to run the Streamlit version locally:
+## 👩‍💻 About Varia Studio
 
-1. Clone the repository:
+Varia Studio builds digital tools and AI models for modern agriculture. We focus on soil intelligence, computer vision, and decision-support systems.
 
-   git clone https://github.com/mahkzmi/varia-trait-bridge.git
-   cd varia-trait-bridge
-   
-Install dependencies:
+- 🌐 Website: [variastudio.framer.website](https://variastudio.framer.website)
+- 📧 Email: mah.kzmi21@gmail.com
 
-bash
-pip install -r requirements.txt
-Run the app:
+## 📄 License
 
-bash
-streamlit run app.py
+This project is licensed under the MIT License.
 
-||||||||||||||||||||||||||||||||
-Built with 💡 by Varia Studio
-Digital tools for modern agriculture.
-variastudio.framer.website | mah.kzmi21@gmail.com
+---
+
+<p align="center">
+  <i>Built with precision by Varia Studio.</i>
+</p>
