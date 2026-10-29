@@ -61,7 +61,7 @@ Run the app:
 bash
 streamlit run app.py
 
-
+||||||||||||||||||||||||||||||||
 Built with 💡 by Varia Studio
 Digital tools for modern agriculture.
 variastudio.framer.website | mah.kzmi21@gmail.com
